@@ -1,0 +1,11 @@
+import random
+import string
+
+# Define characters to use: letters, digits, and symbols
+all_chars = string.ascii_letters + string.digits + string.punctuation
+
+# Generate random 8-character password
+password = ''.join(random.choices(all_chars, k=8))
+
+# Display the password
+print("Generated Password:", password)

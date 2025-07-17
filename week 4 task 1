@@ -1,0 +1,12 @@
+# Ask the user to input any value
+user_input = input("Enter any value: ")
+
+# Print the type of the input
+print("Type of the input (by default):", type(user_input))
+
+# Ask user to enter a Python code string to execute
+code_input = input("Enter Python code to execute (e.g., print('Hello')): ")
+
+# Use exec() to execute the code
+print("Executing your code...")
+exec(code_input)

@@ -1,0 +1,22 @@
+from datetime import datetime
+
+# Ask user for their birthdate in YYYY-MM-DD format
+birth_date_str = input("Enter your birth date (YYYY-MM-DD): ")
+
+# Convert string to datetime object
+birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d")
+
+today = datetime.today()
+
+# Calculate age in years
+age_years = today.year - birth_date.year
+
+if (today.month, today.day) < (birth_date.month, birth_date.day):
+    age_years -= 1
+
+# Calculate total days lived
+days_lived = (today - birth_date).days
+
+# Display results
+print(f"\nYou are {age_years} years old.")
+print(f"You have lived for {days_lived} days.")

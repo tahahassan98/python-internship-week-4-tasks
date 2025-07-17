@@ -1,0 +1,11 @@
+# Ask user for a Python expression as a string
+expression = input("Enter a Python expression (e.g., 2 + 3 * 4): ")
+
+# Define a variable to hold the result
+result = None
+
+# Use exec() to evaluate the expression and store the result
+exec(f"result = {expression}")
+
+# Show the result
+print("Result of the expression:", result)
